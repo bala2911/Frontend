@@ -3,11 +3,7 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
-import {
-  userDetailReducer,
-  userLoginReducer,
-  userRegisterReducer,
-} from './reducers/userReducer';
+import { userLoginReducer, userRegisterReducer } from './reducers/userReducer';
 
 const reducer = combineReducers({
   //productList is the piece of state
@@ -15,7 +11,6 @@ const reducer = combineReducers({
 
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
-  userDetail: userDetailReducer,
 });
 
 const userInfoFromStorage = localStorage.getItem('userInfo')
